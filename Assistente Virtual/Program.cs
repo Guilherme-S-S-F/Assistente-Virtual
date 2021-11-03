@@ -19,7 +19,8 @@ namespace Assistente_Virtual
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAssistente());            
+            Application.Run(new FormAssistente());
+
         }
        
     }
