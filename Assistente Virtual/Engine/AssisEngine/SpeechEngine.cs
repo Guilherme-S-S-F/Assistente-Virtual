@@ -33,6 +33,7 @@ namespace Assistente_Virtual.Engine
                 language = new CultureInfo("pt-BR");
                 RecEngine = new SpeechRecognitionEngine(language);
                 Speaker = new SpeechSynthesizer();
+                
             }
             catch(Exception e)
             {
@@ -41,7 +42,7 @@ namespace Assistente_Virtual.Engine
 
             Speaker.Volume = FormAssistente.instance.SliderVolume.Value;
             Speaker.Rate = 3;
-
+            
             AssisGrammarLoad();
         }
                            
@@ -52,9 +53,12 @@ namespace Assistente_Virtual.Engine
             //Choices related with system commands like get hours, shutdown the computer or applications, etc...
             Choices System_choices = new Choices();
             System_choices.Add(Grammars.GetTimeGrammar().ToArray());
-            System_choices.Add(Grammars.GetDialogGrammar().ToArray());
             //Choices related with Dialogues functions like chat or answer little questions
-            
+            System_choices.Add(Grammars.GetDialogGrammar().ToArray());
+            //Choices related with the music player
+            System_choices.Add(Grammars.GetMusicGrammar().ToArray());
+            //Choices related with the search feature.
+            System_choices.Add(Grammars.GetSearchGrammar().ToArray());
             #endregion
             #region GrammarBuilder
             GrammarBuilder grammarBuilder = new GrammarBuilder();
@@ -66,7 +70,7 @@ namespace Assistente_Virtual.Engine
             try
             {
                 Grammar grammar = new Grammar(grammarBuilder);
-
+                
                 try
                 {
                     RecEngine.SetInputToDefaultAudioDevice();
@@ -92,6 +96,17 @@ namespace Assistente_Virtual.Engine
             {
                 MessageBox.Show("An error as ocorred: " + e.Message);
             }
+            finally
+            {
+                if(DateTime.Now.Hour < 12)
+                {
+                    Speaker.Speak("Bom dia!");
+                }
+                else if(DateTime.Now.Hour > 12)
+                {
+                    Speaker.Speak("Boa tarde!");
+                }
+            }
            
             #endregion
         }
@@ -102,9 +117,9 @@ namespace Assistente_Virtual.Engine
                 FormAssistente.instance.pbMicLevel.Value = FormAssistente.instance.pbMicLevel.Maximum;
             }
            else if(e.AudioLevel < FormAssistente.instance.pbMicLevel.Minimum)
-            {
+           {
                 FormAssistente.instance.pbMicLevel.Value = FormAssistente.instance.pbMicLevel.Minimum;
-            }
+           }
             else
             {
                 FormAssistente.instance.pbMicLevel.Value = e.AudioLevel;
@@ -114,24 +129,25 @@ namespace Assistente_Virtual.Engine
         {
             string result = e.Result.Text;
             string say = "";
-            bool isAwake = false;
-            if(result == "Nexus Acorde" && isAwake == false)
+            
+
+            if(result == "Annie Acorde")
             {
                 StandBye = false;
-                isAwake = true;
+                
                 say = "Estou aqui";
-                
-                Speaker.Speak(say);
-                
-            }
-            else if(result == "Nexus Suspender" && isAwake == true)
-            {
-                StandBye = true;
-                isAwake = false;
-                say = "Se precisar é só chamar...";
                 
                 Speaker.Speak(say);                
             }
+            else if(result == "Annie Suspender")
+            {
+                StandBye = true;
+                
+                say = "Se precisar é só chamar...";
+
+                Speaker.Speak(say);
+            }
+            
         }
         public void Rec_Recognizer(object sender,SpeechRecognizedEventArgs e)
         {

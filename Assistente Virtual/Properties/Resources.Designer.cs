@@ -63,6 +63,46 @@ namespace Assistente_Virtual.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486348528_forward_arrows_arrow_front_go_80452 {
+            get {
+                object obj = ResourceManager.GetObject("1486348528-forward-arrows-arrow-front-go_80452", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486348529_back_backwards_repeat_arrows_arrow_80455 {
+            get {
+                object obj = ResourceManager.GetObject("1486348529-back-backwards-repeat-arrows-arrow_80455", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486348532_music_play_pause_control_go_arrow_80458 {
+            get {
+                object obj = ResourceManager.GetObject("1486348532-music-play-pause-control-go-arrow_80458", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486348534_music_pause_stop_control_play_80459 {
+            get {
+                object obj = ResourceManager.GetObject("1486348534-music-pause-stop-control-play_80459", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BrainImage {
             get {
                 object obj = ResourceManager.GetObject("BrainImage", resourceCulture);
@@ -76,6 +116,86 @@ namespace Assistente_Virtual.Properties {
         internal static System.Drawing.Bitmap BrainLogo {
             get {
                 object obj = ResourceManager.GetObject("BrainLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_close_delete_exit_logout_remove_x_icon_123217 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_close_delete_exit_logout_remove_x_icon_123217", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FolderImage {
+            get {
+                object obj = ResourceManager.GetObject("FolderImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_next_music_player_play_media_4593176_122256 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder-next-music-player-play-media-4593176_122256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_previous_arrow_back_left_music_4593162_122281 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder-previous-arrow-back-left-music-4593162_122281", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimize_118918 {
+            get {
+                object obj = ResourceManager.GetObject("minimize_118918", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload_update_refresh_icon_143703 {
+            get {
+                object obj = ResourceManager.GetObject("reload_update_refresh_icon_143703", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_minimize_icon_138009 {
+            get {
+                object obj = ResourceManager.GetObject("window_minimize_icon_138009", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_minimize_icon_195498 {
+            get {
+                object obj = ResourceManager.GetObject("window_minimize_icon_195498", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

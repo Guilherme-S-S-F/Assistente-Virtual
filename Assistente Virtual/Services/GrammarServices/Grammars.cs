@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using Assis_Serializer;
 
 namespace Assistente_Virtual.Services.GrammarServices
 {
@@ -13,7 +13,9 @@ namespace Assistente_Virtual.Services.GrammarServices
     {
         private static List<string> TimeGrammar = new List<string>();
         private static List<string> DialogGrammar = new List<string>();
-
+        private static List<string> MusicGrammar = new List<string>();
+        private static List<string> SearchGrammar = new List<string>();
+        
         public static List<string> GetTimeGrammar()
         {
             string path = Application.StartupPath + @"\Resources\GrammarsFiles\TimeGrammar.txt";
@@ -45,6 +47,38 @@ namespace Assistente_Virtual.Services.GrammarServices
             }
 
             return DialogGrammar;
+        }
+        public static List<string> GetMusicGrammar()
+        {
+            string path = Application.StartupPath + @"\Resources\GrammarsFiles\MusicGrammar.txt";
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+            string[] lines = File.ReadAllLines(path);
+
+            foreach (string i in lines)
+            {
+                MusicGrammar.Add(i);
+            }
+
+            return MusicGrammar;
+        }
+        public static List<string> GetSearchGrammar()
+        {
+            string path = Application.StartupPath + @"\Resources\GrammarsFiles\SearchGrammar.txt";
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+            string[] lines = File.ReadAllLines(path);
+
+            foreach (string i in lines)
+            {
+                SearchGrammar.Add(i);
+            }
+
+            return SearchGrammar;
         }
     }
 }
